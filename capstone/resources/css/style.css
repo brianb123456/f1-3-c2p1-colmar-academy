@@ -1,0 +1,424 @@
+/*Global*/
+html {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(74, 74, 74);
+}
+h1 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+h2 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.8rem;
+}
+h3 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.container {
+}
+a {
+  font-family: 'Overpass', sans-serif;
+  text-decoration: none;
+}
+.title-box {
+  text-align: center;
+  width: 100%;
+  padding: 32px 0px;
+}
+/*responsive desktop*/
+@media only screen and (min-width: 670px) {
+  #small-only {
+    display: none;
+  }
+}
+/*Responsive mobile*/
+@media only screen and (max-width: 669px) {
+  #big-only {
+    display: none;
+  }
+}
+
+
+
+/*Navigation bar*/
+nav {
+  display: flex;
+  height: 4rem;
+  max-width: 100%;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.header .logo {
+  display: inline;
+}
+.header .logo img {
+  height: 2.5rem; /*could not get this to align like wireframe, any tips here would be great!*/
+}
+/*navigation responsive desktop*/
+@media only screen and (min-width: 670px) {
+  .header .logo span {
+    height: 100%;
+    font-family: arial;
+    font-size: 1.5rem;
+  }
+  .header .first {
+    color: #000;
+    font-weight: 800;
+  }
+  .header .second {
+    color: rgb(179,179,179);
+    font-weight: 400;
+  }
+  .header li {
+    display: inline;
+    padding-right: 1rem;
+  }
+  .header li a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+/*navigation responsive mobile*/
+@media only screen and (max-width: 669px) {
+  .header .logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+
+
+/*Banner*/
+.banner {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 1.5rem;
+  background-color: rgb(216,216,216);
+}
+.banner .right {
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner .right h1 {
+  line-height: 1.4;
+  padding-bottom: 2.5rem;
+}
+.banner .right h2 {
+  line-height: 1.2;
+  padding-bottom: 2.5rem;
+}
+.banner .right .button {
+  background-color: rgb(74,74,74);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: .5rem 0rem;
+  color: white;
+}
+/*banner responsive desktop*/
+@media only screen and (min-width: 670px) {
+  .banner .left {
+    max-width: 60%;
+  }
+  .banner .left img {
+    max-height: auto;
+    max-width: 100%;
+  }
+}
+/*banner responsive mobile*/
+@media only screen and (max-width: 669px) {
+  .banner {
+    display: block;
+    padding-left: 0rem;
+    padding-top: 0rem;
+    padding-right: 0rem;
+    width: 100%;
+  }
+  .banner .left {
+    width: 100%;
+  }
+  .banner .left .container-banner {
+    width: 100%;
+    height: 11.25rem;
+    background-color: rgb(155,155,155);
+  }
+  .banner .right,
+   .banner .right h2 {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .banner .right .button {
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    background-color: rgb(155,155,155);
+  }
+}
+
+
+
+/*Information*/
+.information {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(243, 245, 245);
+}
+.information .right .box {
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+}
+.information .right .box-img img {
+  max-width: 100%;
+}
+.information .right .box .box-text a {
+  line-height: 3;
+}
+/*information responsive desktop*/
+@media only screen and (min-width: 670px) {
+  .information {
+    padding: 2rem 1.5rem;
+  }
+  .information .left {
+    max-width: 60%;
+    padding-right: 1.5rem;
+  }
+  .information .left img {
+    max-width: 100%;
+    max-height: auto;
+  }
+  .information .left h1 {
+    padding-top: 2rem;
+  }
+  .information .left .quote,
+  .information .left .author  {
+    padding-top: 1.5rem;
+    line-height: 1.2;
+  }
+  .information .right .box-img {
+    max-width: 35%;
+    padding: 1rem;
+  }
+  #firstimg {
+    padding-top: 0;
+  }
+  .information .right .box:last-child {
+    background-color: rgb(216,216,216);
+  }
+}
+/*information responsive mobile*/
+@media only screen and (max-width: 669px) {
+  .information {
+    padding: 1rem 1rem;
+  }
+  .information .right {
+    width: 100%;
+  }
+  .information .right .box {
+    display: flex;
+    flex-direction: column;
+  }
+  .information .right .box-img {
+    width: 100%;
+  }
+  .information .right .box-img img {
+    width: 100%;
+    max-height: 18rem; /*had trouble getting images to scale with auto so had to create a fixed height, any tips here would be great */
+  }
+  .information .right .box-text {
+    width: 100%;
+    padding-left: 1rem;
+    text-align: left;
+  }
+  /*source of format h1*/
+  .information .right .box-text .box-title {
+    font-family: 'Overpass', sans-serif;
+    font-size: 2.0rem;
+    font-weight: 800;
+  }
+  /*source of format h2*/
+  .information .right .box-text .box-content {
+      font-family: 'Overpass', sans-serif;
+      font-size: 1.5rem;
+    }
+}
+
+
+
+/*Courses*/
+.courses {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.course {
+  text-align: left;
+  background-color: rgb(234, 235, 236);
+}
+.course-text {
+  padding-left: 1rem;
+}
+.course-text h3 {
+  padding-top: 1rem;
+  line-height: 2;
+}
+.course-text .course-list-prefix {
+  margin-top: .5rem;
+  text-transform: uppercase;
+}
+.course-text .course-list {
+  margin-top: .5rem;
+}
+/*courses responsive desktop*/
+@media only screen and (min-width: 670px) {
+  #courses-title {
+    background-color: rgb(216,216,216);
+  }
+  .courses {
+    background-color: rgb(216,216,216);
+    padding: 2rem 0rem;
+  }
+  .courses .course .course-img img {
+    max-width: 100%;
+  }
+  .course {
+    padding-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 18.75rem;
+  }
+}
+/*courses responsive mobile*/
+@media only screen and (max-width: 669px) {
+  #courses-title {
+    border-top: 1px solid rgb(216,216,216);
+    background-color: rgb(245, 244, 245);
+  }
+  .courses {
+    width: 100%;
+    padding: 1rem 0rem;
+    background-color: rgb(245, 244, 245);
+  }
+  .course {
+    margin: 0rem 0rem 0.5rem 0rem;
+    width: 100%;
+    background-color: rgb(245, 244, 245);
+  }
+  .course-text {
+    max-width: 100%;
+    padding-right: 1rem;
+  }
+  /*source of format h2*/
+  .courses .course .course-title {
+    max-width: 100%;
+    background-color: rgb(216,216,216);
+    padding: 1rem;
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/*Thesis*/
+.thesis {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 1.5rem;
+  background-color: rgb(243, 245, 245);
+}
+.thesis .left video {
+  max-width: 100%;
+  max-height: auto;
+}
+.thesis .left h1 {
+  padding-top: 2rem;
+}
+.thesis .left .quote {
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+.thesis .right .box {
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+}
+.thesis .right .box-img {
+  max-width: 35%;
+  padding: 1rem;
+}
+.thesis .right .box-img img {
+  max-width: 100%;
+}
+.thesis .right .box:first-child {
+  background-color: rgb(216,216,216);
+}
+/*thesis responsive desktop*/
+@media only screen and (min-width: 670px) {
+  #thesis-title {
+    background-color: rgb(243, 245, 245);
+  }
+  .thesis .left {
+    max-width: 60%;
+    padding-right: 1.5rem;
+    text-align: left;
+  }
+}
+/*thesis responsive mobile*/
+@media only screen and (max-width: 669px) {
+  #thesis-title {
+    border-top: 1px solid rgb(216,216,216);
+    background-color: rgb(243, 245, 245);
+  }
+  .thesis {
+    background-color: rgb(243, 245, 245);
+  }
+}
+
+
+
+
+/*Footer*/
+.footer {
+  border-top: 1px solid rgb(216,216,216);
+  background-color: rgb(243, 245, 245);
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+.footer .container .right-footer ul {
+  display: flex;
+}
+.footer .container .right-footer li {
+  padding-left: 1rem;
+}
+/*footer responsive desktop*/
+@media only screen and (min-width: 670px) {
+  .footer {
+    padding-bottom: 3rem;
+  }
+}
+/*footer responsive mobile*/
+@media only screen and (max-width: 669px) {
+  .footer .container .left-footer {
+    padding: 1rem .5rem;
+  }
+}
+
+/*The end*/
